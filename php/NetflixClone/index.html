@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Netflix Clone
+    </title>
+    <style>
+    *{
+      box-sizing: border-box;
+    }
+      #header{
+        background: black;
+        color: white;
+        overflow: auto;
+        padding-left: 25px;
+         padding-right: 25px;
+      }
+      #header a{
+        font-family: helvetica;
+        text-decoration: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .logo{
+        float: left;
+        display: inline-block;
+        background:red;
+        margin-right:25px;
+        padding: 20px;
+      }
+      .leftMenu{
+        float: left;
+        display: inline-block;
+        background:black;
+      }
+      .leftMenu ul{
+        list-style:none;
+        padding: 0;
+        margin:0;
+      }
+      .leftMenu ul li{
+        display: inline-block;
+        padding: 20px;
+      }
+      .leftMenu ul li a{
+        color: white;
+      }
+      .leftMenu ul li a.dropdown{
+        color: red;
+      }
+      .rightMenu{
+        float: right;
+        display: inline-block;
+        color:black;
+        background:black;
+      }
+      .rightMenu ul{
+        list-style:none;
+        padding: 0;
+        margin:0;
+      }
+      .rightMenu ul li{
+        display: inline-block;
+        padding: 20px;
+      }
+      .rightMenu ul li a{
+        color: white;
+      }
+        .leftMenu ul li a:hover{
+        color:red;
+      }
+         .rightMenu ul li a:hover{
+        color:red;
+      }
+      #largeimage{
+        padding:200px 25px;
+          background: -webkit-linear-gradient(-180deg, rgba(231,31,17,.7) 0%, #000000 100%), url(http://cdn-static.denofgeek.com/sites/denofgeek/files/styles/main_wide/public/5/21//spider-man.jpg?itok=IH961vCG) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+      .discription-box{
+        width: 50%;
+      }
+      .description-box h1{
+        font-family: serif;
+        font-weight: 700;
+          font-size: 60px;
+          margin: 0;
+          color: white;
+
+      }
+       .description-box h3{
+         font-family: helvetica;
+         font-weight: 300;
+         font-size: 25px;
+         margin: 0px;
+          color: white;
+
+      }
+      .description-box h4{
+           font-family: helvetica;
+           font-weight: 300;
+          color: white;
+          margin: 0px;
+      }
+       .description-box p{
+         margin: 25px 0px !important;
+           font-family: helvetica;
+           font-weight: 100;
+           margin: 0px;
+           color: white;
+
+      }
+      .button1{
+        display: inline-block;
+        padding: 12px 20px;
+        background: #000;
+        color: white;
+        cursor:pointer;
+      }
+      .button1:hover{
+          background: red;
+         }
+      .button2{
+        display: inline-block;
+        padding: 10px 18px;
+        border:2px solid #000;
+        color: white;
+        cursor:pointer;
+      }
+      .button2:hover{
+          background: black;
+         }
+      #videos{
+        width: 100%;
+        background: black;
+      }
+      .row{
+        font-size:0;
+        width:100%;
+      }
+        .boxes{
+        display: inline-block;
+        background: red;
+        font-size:16px;
+        width: 300px;
+        min-height: 150px;
+        font-size: 16px;
+        margin:2.5%;
+        padding: 15px;
+      }
+
+      .boxes h4{
+        font-family: helvetica;
+        margin: 0;
+        color: white;
+        padding: 5px;
+      }
+
+      .boxes p{
+        display: none;
+    }
+      .video1{
+         background: -webkit-linear-gradient(-180deg, rgba(231,31,17,.3) 0%, #000000 100%), url( http://www.gameranx.com/images/updates/1290779487bioshock.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      }
+        .video2{
+         background: -webkit-linear-gradient(-180deg, rgba(231,31,17,.3) 0%, #000000 100%), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQBVxipfKX3Oadiz4ZHlh-PnQvNq7bK6hWYrd0IouZ5naQXtnOA) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      }
+          .video3{
+         background: -webkit-linear-gradient(-180deg, rgba(231,31,17,.3) 0%, #000000 100%), url( https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMYD_HSQeC7aLyh9XmMsp6ygauKNTnDncG-EOViu4IUyW8P5t) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      }
+             .video4{
+         background: -webkit-linear-gradient(-180deg, rgba(231,31,17,.3) 0%, #000000 100%), url( https://i.pinimg.com/originals/33/2e/b2/332eb29d9ee03e32d0fa7771cfac9410.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      }
+              .video5{
+         background: -webkit-linear-gradient(-180deg, rgba(231,31,17,.3) 0%, #000000 100%), url(http://cafmp.com/wp-content/uploads/2012/11/Avatar-608x900.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      }
+
+    @media screen and (max-width: 600px) {
+    .boxes{
+      width: 95%;
+      margin: 2.5%;
+    }
+    .boxes h4{
+      font-family: helvetica;
+      font-weight: 100;
+      font-size: 40px;
+    }
+    .boxes p{
+      display: block;
+      font-family: helvetica;
+      font-weight: 300;
+      font-size: 18px;
+      color: #fff;
+    }
+}
+    </style>
+  </head>
+  <body>
+   <div id="header">
+     <div class="logo">Netflix</div>
+     <div class="leftMenu">
+       <ul>
+         <li><a href= "kids.html" class="dropdown">Browse</a></li>
+         <li><a href= "kids.html">Kids</a></li>
+         <li><a href= "kids.html">DVD</a></li>
+       </ul>
+     </div>
+     <div class="rightMenu">
+       <ul>
+         <li><a href= "kids.html">Search</a></li>
+         <li><a href= "kids.html">Bell</a></li>
+         <li><a href= "kids.html">Username</a></li>
+       </ul>
+     </div>
+   </div>
+   <div id="largeimage">
+     <div class="description-box">
+     <h4>Netflix Presents</h4>
+     <h1>SPIDERMAN 3!</h1>
+     <h3>Available on June 5th</h3>
+     <p>Lorem ipsum dolor sit amet, et vim erant cetero, ex ius labitur expetendis, sit in nusquam assentior. Vitae offendit nam ex, labitur scaevola vel in, tantas iudicabit in mei. Vim natum aliquam ei. No duo persius invenire sententiae, sea iudico facilis constituto eu, an vel clita sensibus aliquando. Sed ne quas apeirian instructior. Id quo impedit argumentum, mei menandri similique expetendis et.</p>
+     <div class="button1">button1</div>
+     <div class="button2">button2</div>
+       </div>
+   </div>
+   <div id="videos">
+     <div class="row">
+       <div class="boxes video1">
+        <h4>Bio Shock</h4>
+        <p>Lorem ipsum dolor sit amet, et vim erant cetero, ex ius labitur expetendis, sit in nusquam assentior. Vitae offendit nam ex, labitur scaevola vel in</p>
+       </div>
+       <div class="boxes video2">
+        <h4>Wonder Woman</h4>
+        <p>Lorem ipsum dolor sit amet, et vim erant cetero, ex ius labitur expetendis, sit in nusquam assentior. Vitae offendit nam ex, labitur scaevola vel in</p>
+       </div>
+       <div class="boxes video3">
+         <h4>Sherlock Holmes</h4>
+         <p>Lorem ipsum dolor sit amet, et vim erant cetero, ex ius labitur expetendis, sit in nusquam assentior. Vitae offendit nam ex, labitur scaevola vel in</p>
+       </div>
+       <div class="boxes video4">
+        <h4>The Incredibles</h4>
+        <p>Lorem ipsum dolor sit amet, et vim erant cetero, ex ius labitur expetendis, sit in nusquam assentior. Vitae offendit nam ex, labitur scaevola vel in</p>
+       </div>
+       <div class="boxes video5">
+        <h4>Avatar</h4>
+        <p>Lorem ipsum dolor sit amet, et vim erant cetero, ex ius labitur expetendis, sit in nusquam assentior. Vitae offendit nam ex, labitur scaevola vel in</p>
+       </div>
+     </div>
+   </div>
+  </body>
+</html>
